@@ -1,0 +1,60 @@
+---
+import { getImage } from 'astro:assets'
+import myBackground from '@/assets/klimatyzacja.jpeg'
+
+const optimizedBackground = await getImage({
+  src: myBackground,
+  format: 'avif',
+})
+---
+
+<section
+  class='relative w-full bg-center bg-cover min-h-screen'
+  style={`background-image: url(${optimizedBackground.src});`}
+>
+  <!-- Overlay -->
+  <div
+    class='absolute inset-0 bg-gradient-to-br from-[#272D2D]/80 to-[#F6C5AF]/20'
+  >
+  </div>
+  <div class='relative h-dvh z-10 grid md:grid-cols-2'>
+    <div
+      class='flex flex-col h-full pt-50 2xl:pt-60 justify-between lg:w-[65%] bg-gradient-to-b from-secondary to-secondary/60'
+    >
+      <div class='flex flex-col h-full px-4 lg:px-16'>
+        <div class='flex flex-col gap-12'>
+          <h1 class='text-sm font-bold'>
+            Instalator klimatyzacji i rekuperacji Biała Podlaska
+          </h1>
+
+          <p
+            class='font-semibold text-[#23395B] text-2xl xl:text-4xl 2xl:text-6xl tracking-wide'
+          >
+            Komfortowy klimat dla Twojego domu
+          </p>
+          <p class='font-medium text-lg xl:text-2xl'>
+            Jesteśmy zespołem instalatorów systemów klimatyzacji i rekuperacji w
+            budynkach przemysłowych i mieszkalnych. Działamy w Białej Podlaskiej
+            i okolicach.
+          </p>
+          <div class='flex flex-col xl:flex-row gap-4'>
+            <a
+              class='flex bg-[#23395B] text-white w-full justify-center text-2xl py-4 px-8 rounded-full'
+              href='/oferta'>Skontaktuj się</a
+            >
+            <a
+              class='flex bg-[#23395B] text-white w-full justify-center text-2xl py-4 px-8 rounded-full'
+              href='/oferta'>Certyfikaty</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .double-brand-clip {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+</style>
