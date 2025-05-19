@@ -1,6 +1,7 @@
 ---
 import { getImage } from 'astro:assets'
 import myBackground from '@/assets/klimatyzacja.jpeg'
+import { Icon } from 'astro-icon/components'
 
 const optimizedBackground = await getImage({
   src: myBackground,
@@ -9,41 +10,42 @@ const optimizedBackground = await getImage({
 ---
 
 <section
-  class='relative w-full bg-center bg-cover min-h-screen'
+  class='relative w-full bg-center bg-cover min-h-[40vh] xl:min-h-screen'
   style={`background-image: url(${optimizedBackground.src});`}
 >
-  <!-- Overlay -->
-  <div
-    class='absolute inset-0 bg-gradient-to-br from-[#272D2D]/80 to-[#F6C5AF]/20'
-  >
-  </div>
+  <!-- Overlay bg-gradient-to-br from-[#272D2D]/80 to-[#F6C5AF]/20 -->
+  <div class='absolute inset-0 bg-white/40'></div>
   <div class='relative h-dvh z-10 grid md:grid-cols-2'>
+    <Icon
+      name={'wave'}
+      class={'absolute z-20 bottom-0 left-0 right-0 w-full h-auto'}
+    />
     <div
-      class='flex flex-col h-full pt-50 2xl:pt-60 justify-between lg:w-[65%] bg-gradient-to-b from-secondary to-secondary/60'
+      class='flex flex-col h-full pt-24 xl:pt-50 2xl:pt-60 justify-between lg:w-[65%] bg-white/60 lg:bg-secondary'
     >
       <div class='flex flex-col h-full px-4 lg:px-16'>
-        <div class='flex flex-col gap-12'>
+        <div class='flex flex-col gap-8 xl:gap-12 text-center xl:text-left'>
           <h1 class='text-sm font-bold'>
             Instalator klimatyzacji i rekuperacji Biała Podlaska
           </h1>
 
           <p
-            class='font-semibold text-[#23395B] text-2xl xl:text-4xl 2xl:text-6xl tracking-wide'
+            class='font-semibold text-[#23395B] text-3xl xl:text-4xl 2xl:text-6xl tracking-wide'
           >
             Komfortowy klimat dla Twojego domu
           </p>
-          <p class='font-medium text-lg xl:text-2xl'>
+          <p class='font-semibold text-base xl:text-2xl'>
             Jesteśmy zespołem instalatorów systemów klimatyzacji i rekuperacji w
             budynkach przemysłowych i mieszkalnych. Działamy w Białej Podlaskiej
             i okolicach.
           </p>
-          <div class='flex flex-col xl:flex-row gap-4'>
+          <div class='flex flex-col xl:flex-row gap-4 text-xl xl:text-2xl'>
             <a
-              class='flex bg-[#23395B] text-white w-full justify-center text-2xl py-4 px-8 rounded-full'
+              class='flex bg-[#23395B] text-white w-full justify-center py-4 px-8 rounded-full'
               href='/oferta'>Skontaktuj się</a
             >
             <a
-              class='flex bg-[#23395B] text-white w-full justify-center text-2xl py-4 px-8 rounded-full'
+              class='flex bg-[#23395B] text-white w-full justify-center py-4 px-8 rounded-full'
               href='/oferta'>Certyfikaty</a
             >
           </div>
