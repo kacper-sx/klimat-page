@@ -21,7 +21,7 @@
   --color-foreground: oklch(0.31 0.0082 137.81);
   --color-secondary: oklch(0.88 0.1072 201.3);
   --color-border: oklch(33.68% 0 0);
-  --color-accent: oklch(0.3 0.0706 156.99);
+  --color-accent: oklch(0.9065 0.1367 93.23);
 
   --animate-fade-in-scale: fade-in-scale 0.7s ease-out;
   --animate-fade-in-scale-index: fade-in-scale 1s ease-out;

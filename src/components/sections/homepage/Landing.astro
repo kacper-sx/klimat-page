@@ -5,6 +5,7 @@ import { Icon } from 'astro-icon/components'
 
 const optimizedBackground = await getImage({
   src: myBackground,
+  quality: 40,
   format: 'avif',
 })
 ---

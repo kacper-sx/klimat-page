@@ -1,0 +1,60 @@
+---
+import { getImage } from 'astro:assets'
+import myBackground from '@/assets/klimatyzacja.jpeg'
+import { Icon } from 'astro-icon/components'
+import Breadcrumbs from './Breadcrumbs.astro'
+import { type BreadcrumbEntry } from '@/lib/generateBreadcrumbsJSONLD'
+import { Image, type LocalImageProps } from 'astro:assets'
+
+export interface Props {
+  title: string
+  breadcrumb: BreadcrumbEntry
+  isContact?: boolean
+  img: ImageMetadata
+}
+
+const { title, breadcrumb, img } = Astro.props as Props
+---
+
+<section
+  class='grid md:grid-cols-2 h-[dvh] items-center md:items-end relative bg-center bg-cover min-h-[50vh] max-h-[50vh] overflow-hidden'
+  style={`background-image: url(${img.src});`}
+>
+  <div class='absolute inset-0 bg-secondary/80'></div>
+
+  <div class='flex flex-col gap-8 w-full py-8 xl:py-16 z-20 px-spaced'>
+    <Breadcrumbs
+      breadcrumbs={[
+        { href: '/', children: 'Klimatbp' },
+        { href: breadcrumb.href, children: breadcrumb.children },
+      ]}
+    />
+    <h1 class='font-bold text-3xl md:text-4xl xl:text-6xl'>{title}</h1>
+    {
+      !Astro.props.isContact && (
+        <a
+          class='flex z-30 bg-[#23395B] text-white w-max justify-center py-4 px-8 rounded-full text-xl xl:text-2xl'
+          href='/kontakt'
+        >
+          Złóż zamówienie
+        </a>
+      )
+    }
+  </div>
+  <div
+    class='bg-accent hidden md:block double-brand-clip w-full md:max-w-lg h-full z-20 place-self-end'
+  >
+  </div>
+</section>
+
+<style>
+  .double-brand-clip {
+    clip-path: none; /* domyślnie brak efektu */
+  }
+
+  @media (min-width: 1024px) {
+    .double-brand-clip {
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 59% 100%);
+    }
+  }
+</style>
