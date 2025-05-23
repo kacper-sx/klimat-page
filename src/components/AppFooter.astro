@@ -1,0 +1,86 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import P1 from '@/assets/logo.png'
+
+const contactSections = [
+  {
+    title: 'Dane kontaktowe',
+    lines: ['+48 504 450 671', 'kontakt@klimatbp.com'],
+  },
+  {
+    title: 'Dane adresowe',
+    lines: ['ul. Robotnicza 38 ', '21-500 Biała Podlaska'],
+  },
+  {
+    title: 'Strony',
+    links: [
+      {
+        name: 'Klimatyzacja',
+        href: '/klimatyzacja',
+      },
+      {
+        name: 'Rekuperacja',
+        href: '/rekuperacja',
+      },
+      {
+        name: 'Kontakt',
+        href: '/kontakt',
+      },
+    ],
+  },
+]
+---
+
+<footer
+  class='flex flex-col px-spaced pt-4 bg-white lg:pt-8 pb-4 gap-8 items-center justify-between'
+>
+  <div
+    class='flex flex-col xl:flex-row justify-between items-center w-full border-b-2 border-primary pb-4 lg:pb-8'
+  >
+    <a href='/' aria-label='Strona główna'>
+      <Image format='webp' src={P1} alt='Logo' class='flex h-auto w-auto' />
+    </a>
+
+    <div
+      class='grid grid-cols-1 marcellus-regular lg:grid-cols-3 lg:justify-between w-full lg:gap-0 gap-8 items-center text-xl lg:text-2xl'
+    >
+      {
+        contactSections.map((section) => (
+          <div class='flex flex-col gap-3 lg:place-self-center'>
+            <p class='text-primary/80 font-semibold text-base'>
+              {section.title}
+            </p>
+            {section.lines && section.lines.map((line) => <p>{line}</p>)}
+            {section.links &&
+              section.links.map(({ name, href }) => (
+                <a href={href} class=''>
+                  {name}
+                </a>
+              ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div
+    class='flex flex-col lg:flex-row lg:gap-8 gap-4 justify-between text-base font-medium w-full'
+  >
+    <p>&copy; {new Date().getFullYear()} Klimatbp</p>
+    <p>
+      <a href='/polityka'>Polityka prywatności</a> i <a href='/cookies'
+        >cookies</a
+      >
+    </p>
+    <p>
+      Realizacja -{' '}
+      <a
+        class='underline underline-offset-3 font-semibold'
+        href='https://kacper-saw-portfolio.pages.dev/'
+      >
+        kacper-sx
+      </a>
+    </p>
+  </div>
+</footer>

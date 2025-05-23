@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css'
 import AppHeader from '@/components/AppHeader.astro'
+import AppFooter from '@/components/AppFooter.astro'
 
 export interface Props {
   title: string
@@ -35,11 +36,11 @@ const { title, description, cannonical, keywords } = Astro.props as Props
 
     <meta
       property='og:title'
-      content={'Adwokat Radosław Dzyr | Kancelaria Adwokacka Biała Podlaska'}
+      content={'Klimatbp Mateusz Gadomski - klimatyzacja i rekuperacja'}
     />
     <meta
       property='og:description'
-      content={'Kancelaria Adwokacka - Adwokat Radosław Rdzyr Biała Podlaska. Usługi prawne dla firm i osób fizycznych.'}
+      content={'Renomowany instalator klimatyzacji i rekuperacji Biała Podlaska - Klimatbp.'}
     />
     <meta property='og:url' content={'https://klimatbp.pl'} />
     <meta property='og:image' content={'https://klimatbp.pl/og-image.png'} />
@@ -50,23 +51,23 @@ const { title, description, cannonical, keywords } = Astro.props as Props
     <meta name='DC.language' content='pl' />
     <meta name='DC.type' content='website' />
     <meta name='DC.format' content='text/html' />
-    <meta name='DC.rights' content='Kancelaria Adwokacka Radosław Dzyr' />
+    <meta name='DC.rights' content='Klimatbp Mateusz Gadomski' />
     <meta
       name='DC.subject'
-      content={'Kancelaria Adwokacka - Adwokat Radosław Rdzyr Biała Podlaska. Usługi prawne dla firm i osób fizycznych.'}
+      content={'Klimatyzacja, wentylacja, rekuperacja Biała Podlaska'}
     />
     <script is:inline type='application/ld+json'>
       {
         "@context": "https://schema.org",
         "@type": "LegalService",
-        "name": "Kancelaria Adwokacka Radosław Dzyr",
+        "name": "Klimatbp Mateusz Gadomski",
         "image": "https://klimatbp.pl/logo.ico",
         "@id": "https://klimatbp.pl",
         "url": "https://klimatbp.pl",
-        "telephone": "+48 503 172 772",
+        "telephone": "+48 504 450 671",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "ul. Brzeska 6",
+          "streetAddress": "ul. Robotnicza 38",
           "addressLocality": "Biała Podlaska",
           "postalCode": "21-500",
           "addressCountry": "PL"
@@ -76,21 +77,21 @@ const { title, description, cannonical, keywords } = Astro.props as Props
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "08:00",
-          "closes": "18:00"
+          "closes": "20:00"
         },
         "founder": {
           "@type": "Person",
-          "name": "Radosław dzyr"
+          "name": "Mateusz Gadomski"
         },
         "identifier": [
           {
             "@type": "PropertyValue",
             "propertyID": "NIP",
-            "value": "5371701283"
+            "value": "5372583093"
           }
         ],
-        "description": "Kancelaria Adwokacka - Adwokat Radosław Rdzyr Biała Podlaska. Usługi prawne dla firm i osób fizycznych.",
-        "email": "adwokat.dzyr@wp.pl"
+        "description": "Instalator klimatyzacji i rekuperacji w Białej Podlaskiej.",
+        "email": "kontakt@klimatbp.com"
       }
     </script>
   </head>
@@ -99,6 +100,6 @@ const { title, description, cannonical, keywords } = Astro.props as Props
     <main>
       <slot />
     </main>
-    <!-- <AppFooter /> -->
+    <AppFooter />
   </body>
 </html>

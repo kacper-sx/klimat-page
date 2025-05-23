@@ -7,6 +7,7 @@ const optimizedBackground = await getImage({
   src: myBackground,
   quality: 40,
   format: 'avif',
+  loading: 'eager',
 })
 ---
 
@@ -40,14 +41,14 @@ const optimizedBackground = await getImage({
             budynkach przemysłowych i mieszkalnych. Działamy w Białej Podlaskiej
             i okolicach.
           </p>
-          <div class='flex flex-col xl:flex-row gap-4 text-xl xl:text-2xl'>
+          <div class='flex flex-col xl:flex-row gap-4 text-xl xl:text-2xl z-20'>
             <a
-              class='flex bg-[#23395B] text-white w-full justify-center py-4 px-8 rounded-full'
-              href='/oferta'>Skontaktuj się</a
+              class='flex bg-[#23395B] text-white w-full hover:shadow-lg shadow-primary hover:scale-105 transition-all duration-300 justify-center py-4 px-8 rounded-full'
+              href='/kontakt'>Skontaktuj się</a
             >
             <a
-              class='flex bg-[#23395B] text-white w-full justify-center py-4 px-8 rounded-full'
-              href='/oferta'>Certyfikaty</a
+              class='flex bg-[#23395B] text-white w-full hover:shadow-lg shadow-primary hover:scale-105 transition-all duration-300 justify-center py-4 px-8 rounded-full'
+              href='/#cerificates'>Certyfikaty</a
             >
           </div>
         </div>
