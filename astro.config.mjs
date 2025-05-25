@@ -19,6 +19,7 @@ export default defineConfig({
       lucide: [
         "arrow-up-right",
         "chevron-right",
+        "arrow-right",
         "phone",
         "menu",
         "scroll",

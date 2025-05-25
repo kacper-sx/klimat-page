@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets'
+import P1 from '@/assets/pracownicy.jpeg'
+import AnimatedNumbers from '../../features/Numbers'
+---
+
+<section
+  id='about'
+  class='flex flex-col xl:flex-row px-spaced py-8 lg:py-24 items-center w-full lg:justify-between gap-8 lg:gap-0'
+>
+  <div class='flex flex-col gap-4 lg:gap-8 max-w-2xl text-primary'>
+    <div class='flex flex-col gap-3 text-sm'>
+      <h2 class='font-semibold'>Firma Klimatbp - informacje</h2>
+      <p
+        class='font-semibold text-2xl xl:text-3xl 2xl:text-5xl tracking-wide max-w-3xl'
+      >
+        Kilka słów o nas
+      </p>
+    </div>
+    <div class='flex flex-col gap-6 font-medium'>
+      <p>
+        Stworzenie odpowiednich warunków życia i pracy w budynku nie jest
+        zadaniem prostym. W Klimatbp doskonale zdajemy sobie z tego sprawę,
+        dlatego od lat rozwijamy się jako <strong
+          >instalator klimatyzacji i rekuperacji.</strong
+        >
+        Posiadamy wszystko, co niezbędne do świadczenia najwyższej jakości usług:
+        wieloletnie doświadczenie, wykwalifikowanych specjalistów oraz sprzęt od
+        najlepszych producentów na rynku.
+      </p>
+      <p>
+        Zależy nam na kompleksowym podejściu do każdego projektu, dlatego
+        oferujemy nie tylko montaż, ale również profesjonalne doradztwo, serwis
+        gwarancyjny i pogwarancyjny oraz przeglądy instalacji. Dzięki temu nasi
+        klienci mogą cieszyć się komfortowym i zdrowym mikroklimatem w swoich
+        obiektach przez długie lata, mając pewność, że ich <strong
+          >systemy wentylacyjne i klimatyzacyjne działają optymalnie.</strong
+        >
+      </p>
+    </div>
+    <a
+      href='https://www.google.com/search?sca_esv=2e7e4ea7f55c9eed&rlz=1C1ONGR_plPL1085PL1085&sxsrf=AE3TifMf85HCw5P0HDOEGoymVWIRYUcatw:1748204311177&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzUgtTkrcE9OTK_AtI29UhVJma_0MdxTDPDNb48cjdGhyRmpy6-DMft-ua-_2c65br38beMNaIO8dS0_gieKZcPu8oT4L_oguqK3_QClI8EKQd31hGy7C8_N_Hd_oTyp3PFn-vuo7T-4BomGLUpBPGV-h5DFY&q=Klimat+Mateusz+Gadomski+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E81kaX3EZKWBSX0m1L77OPWAtizOyG0eZexLziH_7b7aXSVLi5MoxeIEVIzoq6J8J0Ye6aHX3LslJjXOHusMz3g3gFkAGT-uPirFvOxwPy_iOqzeGg%3D%3D&hl=pl-PL&sa=X&ved=2ahUKEwiFtNnHuL-NAxXtHxAIHZmwASAQ_4MLegQINRAN&biw=2133&bih=1050&dpr=0.9'
+      target='_blank'
+      rel='noopener'
+      class='flex bg-primary rounded-full items-center hover:scale-105 hover:shadow-xl duration-300 transition-all text-white text-base w-max xl:text-2xl py-4 px-8'
+    >
+      Zobacz opinie klientów
+    </a>
+  </div>
+
+  <div class='flex flex-col gap-4 relative'>
+    <div
+      class='flex xl:absolute -bottom-16 2xl:bottom-8 -left-60 z-10 w-full lg:w-max'
+    >
+      <AnimatedNumbers client:idle />
+    </div>
+    <Image
+      src={P1}
+      format='avif'
+      alt='Tomasz Wasiluk'
+      loading={'lazy'}
+      quality={40}
+      class='double-brand-clip order-first lg:max-w-xl 2xl:max-w-3xl h-auto rounded-t-4xl object-cover'
+    />
+  </div>
+
+  <style>
+    .double-brand-clip {
+      clip-path: none; /* domyślnie brak efektu */
+    }
+
+    @media (min-width: 1024px) {
+      .double-brand-clip {
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+      }
+    }
+  </style>
+</section>

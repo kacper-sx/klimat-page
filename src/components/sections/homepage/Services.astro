@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import P1 from '@/assets/klimatyzacja2.avif'
+
+const specialities = [
+  { href: '/klimatyzacja', text: 'Instalator i serwisant klimatyzacji' },
+  { href: '/rekuperacja', text: 'Instalator i serwisant rekuperacji' },
+]
+---
+
+<section
+  class='flex flex-col xl:flex-row justify-between items-center w-full pl-4 md:pl-8 xl:pl-0 pr-4 md:pr-8 xl:pr-16 py-8 xl:py-24'
+>
+  <div class='w-full flex flex-col gap-1'>
+    <h2 class='text-sm font-bold mb-1 pl-4'>
+      Sprawdzony instalator klimatyzacji i rekuperacji - usługi Klimatbp
+    </h2>
+    <Image
+      format='avif'
+      src={P1}
+      alt='Jednostka zewnętrzna klimatyzacji'
+      class='flex h-full rounded-2xl xl:rounded-r-full xl:max-w-3xl'
+    />
+  </div>
+  <div
+    class='flex flex-col order-first xl:order-none relative text-primary w-full text-center bg-primary px-4 py-8 min-h-[500px] rounded-3xl max-w-3xl'
+  >
+    <div class='flex flex-col gap-3 h-full text-center items-center text-white'>
+      <p
+        class='font-semibold text-2xl xl:text-3xl 2xl:text-5xl tracking-wide max-w-3xl'
+      >
+        Nasze specjalności
+      </p>
+      <p class='max-w-2xl mt-1 font-medium text-lg'>
+        Firma Klimatbp powstała w odpowiedzi na zapotrzebowanie Klientów
+        dotyczące nowatorskich oraz kompleksowych rozwiązań w energetyce.
+        Oferujemy instalatostwo dla domów i budynków publicznych.
+      </p>
+    </div>
+    <div class='flex flex-col xl:absolute -bottom-[50%] -left-32 w-3/4 h-full'>
+      <div class='flex flex-col gap-8 xl:flex-row z-20 uppercase'>
+        {
+          specialities.map((item) => (
+            <a
+              href={item.href}
+              class='flex flex-col gap-4 items-center justify-center transition-all hover:bg-accent hover:scale-110 group duration-300 bg-white rounded-2xl shadow-lg shadow-primary min-h-[200px]'
+            >
+              <h3 class=' font-bold group-hover:text-primary text-2xl'>
+                {item.text}
+              </h3>
+              <Icon
+                name='lucide:arrow-right'
+                class='size-0 group-hover:size-8 -rotate-45 group-hover:rotate-0 transition-transform duration-800 text-primary'
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
