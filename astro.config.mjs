@@ -9,7 +9,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://klimatbp.pl",
+  site: "https://klimatbp.com",
   vite: {
     plugins: [tailwindcss()]
   },

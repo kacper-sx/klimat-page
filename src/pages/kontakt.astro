@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Landing from '@/components/sections/homepage/Landing.astro'
 import Hero from '@/components/features/Hero.astro'
 import P1 from '@/assets/kontakt.avif'
+import Contact from '@/components/sections/contact/Contact.astro'
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -16,10 +17,11 @@ import P1 from '@/assets/kontakt.avif'
   <Hero
     title='Kontakt do Klimatbp'
     breadcrumb={{
-      href: 'https://klimatbp.pl/kontakt',
+      href: 'https://klimatbp.com/kontakt',
       children: 'Kontakt',
     }}
     isContact
     img={P1}
   />
+  <Contact />
 </Layout>
