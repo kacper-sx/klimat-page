@@ -6,11 +6,13 @@ import AnimatedNumbers from '../../features/Numbers'
 
 <section
   id='about'
-  class='flex flex-col xl:flex-row px-spaced py-8 lg:py-24 items-center w-full lg:justify-between gap-8 lg:gap-0'
+  class='flex flex-col 2xl:flex-row px-spaced py-8 lg:py-24 items-center w-full xl:justify-between gap-8 2xl:gap-0'
 >
-  <div class='flex flex-col gap-4 lg:gap-8 max-w-2xl text-primary'>
+  <div
+    class='flex flex-col gap-4 w-full lg:gap-8 2xl:max-w-xl text-white bg-primary p-5 rounded-2xl'
+  >
     <div class='flex flex-col gap-3 text-sm'>
-      <h2 class='font-semibold'>Firma Klimatbp - informacje</h2>
+      <h2 class='font-semibold'>Firma Klimatbp Biała Podlaska - informacje</h2>
       <p
         class='font-semibold text-2xl xl:text-3xl 2xl:text-5xl tracking-wide max-w-3xl'
       >
@@ -24,7 +26,7 @@ import AnimatedNumbers from '../../features/Numbers'
         dlatego od lat rozwijamy się jako <strong
           >instalator klimatyzacji i rekuperacji.</strong
         >
-        Posiadamy wszystko, co niezbędne do świadczenia najwyższej jakości usług:
+        Posiadamy wszystko, co niezbędne do świadczenia usług na najwyższym poziomie:
         wieloletnie doświadczenie, wykwalifikowanych specjalistów oraz sprzęt od
         najlepszych producentów na rynku.
       </p>
@@ -42,15 +44,15 @@ import AnimatedNumbers from '../../features/Numbers'
       href='https://www.google.com/search?sca_esv=2e7e4ea7f55c9eed&rlz=1C1ONGR_plPL1085PL1085&sxsrf=AE3TifMf85HCw5P0HDOEGoymVWIRYUcatw:1748204311177&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzUgtTkrcE9OTK_AtI29UhVJma_0MdxTDPDNb48cjdGhyRmpy6-DMft-ua-_2c65br38beMNaIO8dS0_gieKZcPu8oT4L_oguqK3_QClI8EKQd31hGy7C8_N_Hd_oTyp3PFn-vuo7T-4BomGLUpBPGV-h5DFY&q=Klimat+Mateusz+Gadomski+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E81kaX3EZKWBSX0m1L77OPWAtizOyG0eZexLziH_7b7aXSVLi5MoxeIEVIzoq6J8J0Ye6aHX3LslJjXOHusMz3g3gFkAGT-uPirFvOxwPy_iOqzeGg%3D%3D&hl=pl-PL&sa=X&ved=2ahUKEwiFtNnHuL-NAxXtHxAIHZmwASAQ_4MLegQINRAN&biw=2133&bih=1050&dpr=0.9'
       target='_blank'
       rel='noopener'
-      class='flex bg-primary rounded-full items-center hover:scale-105 hover:shadow-xl duration-300 transition-all text-white text-base w-max xl:text-2xl py-4 px-8'
+      class='flex bg-secondary rounded-full items-center hover:scale-105 hover:shadow-xl duration-300 transition-all text-primary text-base w-max xl:text-2xl py-4 px-8'
     >
       Zobacz opinie klientów
     </a>
   </div>
 
-  <div class='flex flex-col gap-4 relative'>
+  <div class='flex flex-col gap-4 relative w-full xl:w-auto'>
     <div
-      class='flex xl:absolute -bottom-16 2xl:bottom-8 -left-60 z-10 w-full lg:w-max'
+      class='flex xl:absolute -bottom-16 xl:bottom-8 xl:-left-8 2xl:-left-20 z-10 w-full'
     >
       <AnimatedNumbers client:idle />
     </div>
@@ -60,7 +62,7 @@ import AnimatedNumbers from '../../features/Numbers'
       alt='Tomasz Wasiluk'
       loading={'lazy'}
       quality={40}
-      class='double-brand-clip order-first lg:max-w-xl 2xl:max-w-3xl h-auto rounded-t-4xl object-cover'
+      class='double-brand-clip order-first w-full 2xl:max-w-3xl h-auto rounded-t-4xl object-cover'
     />
   </div>
 

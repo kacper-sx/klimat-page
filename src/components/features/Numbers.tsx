@@ -23,7 +23,7 @@ const AnimatedNumbers = () => {
   }, [])
 
   return (
-    <div className="flex bg-primary marcellus-regular rounded-bl-2xl rounded-tr-2xl !text-accent py-6 px-6 flex-col gap-4 lg:gap-12 items-center md:flex-row justify-center shadow-2xl w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 bg-primary rounded-bl-2xl rounded-tr-2xl !text-accent py-6 px-6 flex-col gap-4 lg:gap-12 items-center place-items-center justify-center shadow-2xl w-full">
       {stats.map(({ value, label, noPlus }, index) => (
         <div key={index} ref={index === 0 ? ref : null} className="flex flex-row lg:flex-col gap-2 items-center">
           <span className="font-extrabold text-2xl lg:text-4xl">

@@ -10,7 +10,7 @@ const specialities = [
 ---
 
 <section
-  class='flex flex-col xl:flex-row justify-between items-center w-full pl-4 md:pl-8 xl:pl-0 pr-4 md:pr-8 xl:pr-16 py-8 xl:py-24'
+  class='flex flex-col xl:flex-row gap-8 xl:gap-0 xl:justify-between items-center w-full pl-4 md:pl-8 xl:pl-0 pr-4 md:pr-8 xl:pr-16 py-8 xl:py-24'
 >
   <div class='w-full flex flex-col gap-1'>
     <h2 class='text-sm font-bold mb-1 pl-4'>
@@ -20,11 +20,11 @@ const specialities = [
       format='avif'
       src={P1}
       alt='Jednostka zewnętrzna klimatyzacji'
-      class='flex h-full rounded-2xl xl:rounded-r-full xl:max-w-3xl'
+      class='flex h-full rounded-2xl xl:rounded-r-full xl:max-w-xl 2xl:max-w-3xl'
     />
   </div>
   <div
-    class='flex flex-col order-first xl:order-none relative text-primary w-full text-center bg-primary px-4 py-8 min-h-[500px] rounded-3xl max-w-3xl'
+    class='flex flex-col order-first gap-8 xl:gap-0 xl:order-none relative text-primary w-full text-center bg-primary px-4 py-8 min-h-[400px] 2xl:min-h-[500px] rounded-3xl xl:max-w-3xl'
   >
     <div class='flex flex-col gap-3 h-full text-center items-center text-white'>
       <p
@@ -38,13 +38,15 @@ const specialities = [
         Oferujemy instalatostwo dla domów i budynków publicznych.
       </p>
     </div>
-    <div class='flex flex-col xl:absolute -bottom-[50%] -left-32 w-3/4 h-full'>
+    <div
+      class='flex flex-col xl:absolute -bottom-[50%] -left-32 w-3/4 h-full place-self-center'
+    >
       <div class='flex flex-col gap-8 xl:flex-row z-20 uppercase'>
         {
           specialities.map((item) => (
             <a
               href={item.href}
-              class='flex flex-col gap-4 items-center justify-center transition-all hover:bg-accent hover:scale-110 group duration-300 bg-white rounded-2xl shadow-lg shadow-primary min-h-[200px]'
+              class='flex flex-col gap-4 items-center justify-center p-4 transition-all hover:bg-accent hover:scale-110 group duration-300 bg-white rounded-2xl shadow-lg shadow-primary min-h-[200px]'
             >
               <h3 class=' font-bold group-hover:text-primary text-2xl'>
                 {item.text}
@@ -56,6 +58,14 @@ const specialities = [
             </a>
           ))
         }
+        <a
+          href='https://www.facebook.com/people/KLIMAT/100082871815377/'
+          target='_blank'
+          rel='noopener'
+          class='flex bg-secondary rounded-full normal-case font-bold items-center h-max place-self-center min-w-max hover:scale-105 hover:shadow-xl duration-300 transition-all text-primary text-base w-max py-4 px-8'
+        >
+          Social media
+        </a>
       </div>
     </div>
   </div>
