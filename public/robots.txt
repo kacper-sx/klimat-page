@@ -1,0 +1,14 @@
+
+User-agent: *
+Disallow: /_astro/*
+Disallow: /api/*
+Disallow: /.astor/*
+Disallow: /.astro/*
+Disallow: /.git/*
+Disallow: /.venv/*
+Allow: /
+# Host
+Host: https://klimatbp.com
+
+# Sitemaps
+Sitemap: https://klimatbp.com/sitemap-0.xml
