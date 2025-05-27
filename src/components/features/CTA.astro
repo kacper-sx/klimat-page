@@ -1,0 +1,88 @@
+---
+import Card from './Card.astro'
+import { Icon } from 'astro-icon/components'
+import P1 from '@/assets/klima.avif'
+import { Image } from 'astro:assets'
+
+const servivesData = [
+  {
+    icon: 'lucide:building-2',
+    title: 'Pasja i Doświadczenie',
+    description:
+      'Choć firmę założyliśmy w 2020 roku, nasze doświadczenie i głębokie zaangażowanie w dziedzinie klimatyzacji sięga ponad dekady wstecz.',
+  },
+  {
+    icon: 'lucide:chart-no-axes-combined',
+    title: 'Perfekcja Wykonania',
+    description:
+      'Każda instalacja jest dla nas priorytetem. Dbamy o każdy szczegół, pracując dokładnie i zgodnie z najwyższymi standardami technicznymi.',
+  },
+  {
+    icon: 'lucide:users',
+    title: 'Niezawodność',
+    description:
+      'Stosujemy wyłącznie sprawdzone urządzenia od renomowanych producentów oraz materiały najwyższej jakości, aby zapewnić trwałość i niezawodność systemów.',
+  },
+  {
+    icon: 'lucide:file-chart-column-increasing',
+    title: 'Kompleksowość Usług',
+    description:
+      'Oferujemy pełen zakres usług – od profesjonalnego doradztwa w wyborze idealnego rozwiązania, przez sprzedaż i precyzyjny montaż, aż po kompleksowy serwis gwarancyjny i pogwarancyjny.',
+  },
+  {
+    icon: 'lucide:fingerprint',
+    title: 'Współpraca z Liderami Rynku',
+    description:
+      'Naszą wiarygodność potwierdza również współpraca z siecią Media Expert, dla której z powodzeniem montujemy urządzenia klimatyzacyjne, zapewniając klientom komfort i profesjonalne wsparcie.',
+  },
+  {
+    icon: 'lucide:fingerprint',
+    title: 'Wykwalifikowani Specjaliści',
+    description:
+      'Nasz zespół to osoby z rozległą wiedzą i praktycznymi umiejętnościami, stale podnoszące swoje kwalifikacje. Pracujemy z pasją i zaangażowaniem, dbając o najwyższą jakość realizacji na każdym etapie – od projektu po montaż.',
+  },
+]
+---
+
+<section class='grid grid-cols-1 md:grid-cols-2 gap-12 py-8 xl:py-24 px-spaced'>
+  <p
+    class='flex p-5 bg-white rounded-2xl font-semibold text-2xl xl:text-3xl 2xl:text-5xl tracking-wide justify-center items-center text-center rounded-2x'
+  >
+    Co nas wyróżnia od innych instalatorów?
+  </p>
+  <h2
+    class='flex font-medium text-xl p-5 order-last md:order-none bg-white items-center text-center md:text-start rounded-2xl'
+  >
+    Współpraca z instalatorem klimatyzacji i rekuperacji w Białej Podlaskiej -
+    dlaczego warto?
+  </h2>
+
+  <div class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
+    {
+      servivesData.map((service) => {
+        return <Card {...service} />
+      })
+    }
+  </div>
+  <div
+    class='flex flex-col gap-4 xl:gap-8 bg-primary p-6 rounded-2xl items-center'
+  >
+    <h4
+      class='text-white font-semibold text-2xl xl:text-3xl text-center 2xl:text-5xl tracking-wide justify-center items-center'
+    >
+      Zamów konsultację z intalatorem lub złóż zamówienie
+    </h4>
+    <Image
+      src={P1}
+      loading={'lazy'}
+      alt='klima'
+      class='w-full object-cover rounded-2xl max-h-[40vh]'
+    />
+    <a
+      class='flex z-30 bg-secondary text-primary w-full justify-center py-4 px-8 rounded-full text-xl xl:text-2xl'
+      href='/kontakt'
+    >
+      skontakuj się
+    </a>
+  </div>
+</section>

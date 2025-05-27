@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets'
+import P1 from '@/assets/pracownicy.jpeg'
+import AnimatedNumbers from '../../features/Numbers'
+
+const seoData = [
+  {
+    heading:
+      '5 sygnałów, że czas zadzwonić po instalatora klimatyzacji i rekuperacji Biała Podlaska',
+    paragraph:
+      'Nie musisz czekać na falę upałów, by zadbać o komfort powietrza w domu – warto działać, gdy pojawiają się mniej oczywiste sygnały. Ciągłe zmęczenie podczas pracy zdalnej w słabo wentylowanym pomieszczeniu, zaparowane szyby mimo uchylonych okien, pleśń w łazience lub narożnikach, częste infekcje u dzieci czy hałas zza okna przeszkadzający w pracy i śnie to symptomy, że mikroklimat w domu wymaga poprawy. Rekuperacja i klimatyzacja nie są luksusem, lecz realnym wsparciem zdrowia i codziennego komfortu – zapewniają czyste, filtrowane powietrze bez konieczności otwierania okien, kontrolują wilgotność i eliminują alergeny.',
+  },
+  {
+    heading:
+      'Czy instalator klimatyzacji i rekuperacji w Białej Podlaskiej może poprawić Twoją produktywność w pracy zdalnej?',
+    paragraph:
+      'W dobie pracy zdalnej skupiamy się na ergonomicznym biurku czy szybkim internecie, zapominając, jak ważna jest jakość powietrza i komfort cieplny. Tymczasem to właśnie instalator klimatyzacji i rekuperacji może znacząco wpłynąć na naszą efektywność. Nieodpowiednia temperatura czy zbyt wysoki poziom CO₂ w pomieszczeniu obniżają koncentrację i powodują zmęczenie. Dobrze dobrany system klimatyzacji i wentylacji zapewnia świeże powietrze i optymalną temperaturę – bez potrzeby otwierania okien i narażania się na hałas.',
+  },
+  {
+    heading: 'Instalator Biała Podlaska - na co zrwacać uwagę?',
+    paragraph:
+      'Wyróżnia nas podejście do każdego projektu. Nie „lecimy na czas” – stawiamy na niezachwianą jakość, precyzję i wykonanie każdego etapu zgodnie ze sztuką inżynierską. Każdy montaż i serwis traktujemy z dbałością o najdrobniejszy szczegół, co gwarantuje nie tylko perfekcyjne działanie instalacji, ale także jej długowieczność i bezproblemową eksploatację. Jesteśmy dumni z tego, że nasze realizacje nie wymagają poprawek – wykonujemy je dokładnie za pierwszym razem.',
+  },
+]
+---
+
+<section
+  class='grid grid-cols-1 lg:grid-cols-3 px-spaced pb-8 lg:pb-24 w-full gap-8'
+>
+  {
+    seoData.map(({ heading, paragraph }) => (
+      <div class='flex flex-col gap-4  text-primary'>
+        <h2 class='text-sm font-bold '>{heading}</h2>
+        <p class='text-sm'>{paragraph}</p>
+      </div>
+    ))
+  }
+</section>

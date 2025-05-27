@@ -21,7 +21,7 @@ const { title, description, cannonical, keywords } = Astro.props as Props
       defer></script>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel='icon' type='image/x-icon' href='/favicon.svg' />
 
     <meta name='robots' content='index, follow' />
     <meta name='generator' content={Astro.generator} />
@@ -58,7 +58,7 @@ const { title, description, cannonical, keywords } = Astro.props as Props
         "@context": "https://schema.org",
         "@type": "LegalService",
         "name": "Klimatbp Mateusz Gadomski",
-        "image": "https://klimatbp.com/logo.ico",
+        "image": "https://klimatbp.com/og-image.png",
         "@id": "https://klimatbp.com",
         "url": "https://klimatbp.com",
         "telephone": "+48 504 450 671",
@@ -92,7 +92,7 @@ const { title, description, cannonical, keywords } = Astro.props as Props
       }
     </script>
   </head>
-  <body>
+  <body class='overflow-x-hidden'>
     <AppHeader />
     <main>
       <slot />
