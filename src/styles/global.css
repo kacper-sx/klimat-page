@@ -2,6 +2,10 @@
 
 @import "tailwindcss-intersect";
 
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
 @theme {
 
   --font-sans: 'Arial', 'sans-serif';
@@ -65,7 +69,6 @@
   clip-path: polygon(100% 0%, 100% 53%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
 
-
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -74,7 +77,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 .animate-spin-slow {
   animation: spin-slow 10s linear infinite;
@@ -96,10 +98,12 @@
     background: var(--color-background);
     color: var(--color-foreground);
     display: flex;
-    
+
     flex-direction: column;
   }
   section {
     scroll-margin: 120px;
   }
 }
+
+

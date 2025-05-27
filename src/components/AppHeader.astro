@@ -19,17 +19,17 @@ const pathname = rmTrailingSlash(Astro.url.pathname)
     class='fixed top-2 xl:top-4 z-40 w-[calc(100%-32px)] lg:w-[calc(100%-128px)] ml-4 lg:ml-16'
   >
     <div
-      class='container max-lg:px-4 max-w-none border border-white/10 bg-white shadow-lg rounded-2xl py-4 lg:py-6'
+      class='container max-lg:px-4 max-w-none border border-white/10 bg-white shadow-lg rounded-2xl py-4 lg:py-2'
     >
       <nav
         class='flex relative items-center justify-between px-4 lg:px-12'
         aria-label='Global'
       >
-        <a href='/' class='relative z-10'>
+        <a href='/' class='relative z-10 flex flex-col items-end'>
           <Image
             src={P1}
             alt='Logo'
-            class='w-full max-w-[100px] lg:max-w-[200px] object-cover'
+            class='w-full max-w-[100px] lg:max-w-[150px] object-cover'
             format='webp'
           />
         </a>
@@ -62,7 +62,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname)
               menuMain.map((item) => (
                 <a
                   href={item.url}
-                  class={`transition text-xl rounded-full font-semibold hover:bg-secondary/20 px-4 py-2 ${pathname === item.url ? 'menu-item-active' : ''}`}
+                  class={`transition text-xl text-primary rounded-full font-semibold hover:bg-primary/20 px-4 py-2 ${pathname === item.url ? 'menu-item-active' : ''}`}
                 >
                   {item.name}
                 </a>
@@ -73,9 +73,9 @@ const pathname = rmTrailingSlash(Astro.url.pathname)
         <div class='relative z-10 flex items-center gap-x-4 max-xl:hidden'>
           <a
             href='tel:+48503172772'
-            class='bg-secondary rounded-full flex gap-3 items-center px-6 py-3 font-semibold'
+            class='bg-secondary text-primary rounded-full flex gap-3 items-center px-6 py-3 font-semibold'
           >
-            <Icon name='lucide:phone' class='size-4 text-foreground' />
+            <Icon name='lucide:phone' class='size-4 text-primary' />
             Zadzwoń teraz</a
           >
         </div>
@@ -98,12 +98,12 @@ const pathname = rmTrailingSlash(Astro.url.pathname)
         <Image
           src={P1}
           alt='Logo'
-          class='w-full max-w-[100px] object-cover'
+          class='w-full max-w-[150px] object-cover'
           format='webp'
         />
         <button
           type='button'
-          class='-m-2.5 p-2.5 text-brand-red'
+          class='-m-2.5 p-2.5 text-primary'
           @click='open = false'
         >
           <span class='sr-only'>Close menu</span>
