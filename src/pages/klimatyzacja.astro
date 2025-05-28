@@ -4,6 +4,9 @@ import Landing from '@/components/sections/homepage/Landing.astro'
 import Hero from '@/components/features/Hero.astro'
 import P1 from '@/assets/klimatyzacja.avif'
 import CTA from '@/components/features/CTA.astro'
+import Split from '@/components/sections/air/Split.astro'
+import Multisplit from '@/components/sections/air/Multisplit.astro'
+import Types from '@/components/sections/air/Types.astro'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -23,5 +26,10 @@ import CTA from '@/components/features/CTA.astro'
     }}
     img={P1}
   />
+
+  <Types />
+  <Split />
+  <Multisplit />
+
   <CTA />
 </Layout>

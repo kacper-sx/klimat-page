@@ -1,0 +1,112 @@
+---
+import { Image } from 'astro:assets'
+import P1 from '@/assets/montaz-klimatyzacji.avif'
+import P2 from '@/assets/serwis-klimatyzacji.avif'
+---
+
+<section
+  class='flex flex-col px-spaced py-8 lg:py-24 items-center w-full gap-8 xl:gap-24'
+>
+  <h2
+    class='font-semibold text-2xl xl:text-3xl 2xl:text-5xl tracking-wide p-4 bg-white rounded-2xl text-primary'
+  >
+    Systemy klimatyzacji Biała Podlaska
+  </h2>
+  <div class='flex flex-col xl:flex-row gap-8 xl:gap-0 justify-between'>
+    <div class='flex flex-col gap-4 xl:gap-8'>
+      <div
+        class='flex flex-col lg:flex-row rounded-2xl xl:max-h-[300px] max-w-3xl'
+      >
+        <div
+          class='flex flex-col gap-4 w-full p-6 justify-center items-center lg:items-start lg:pl-8 bg-primary text-white rounded-l-2xl rounded-b-none lg:rounded-l-none rounded-t-2xl lg:rounded-t-none'
+        >
+          <h3
+            class='font-semibold text-lg xl:text-xl 2xl:text-3xl tracking-wide'
+          >
+            Sprzedaż i montaż klimatyzacji
+          </h3>
+          <p class='text-center lg:text-start'>
+            Pomagamy w doborze odpowiedniej klimatyzacji, montujemy i
+            uruchamiamy.
+          </p>
+        </div>
+        <Image
+          format='avif'
+          src={P2}
+          loading={'eager'}
+          fetchpriority={'high'}
+          alt='Jednostka zewnętrzna klimatyzacji'
+          class='flex h-auto w-auto object-cover lg:rounded-r-2xl rounded-b-2xl lg:rounded-b-none xl:max-w-lg'
+        />
+      </div>
+
+      <div
+        class='flex flex-col lg:flex-row rounded-2xl xl:ml-24 xl:max-h-[300px] max-w-3xl'
+      >
+        <div
+          class='flex flex-col gap-4 w-full p-6 justify-center items-center lg:items-start lg:pl-8 bg-primary text-white rounded-l-2xl rounded-b-none lg:rounded-l-none rounded-t-2xl lg:rounded-t-none'
+        >
+          <h3
+            class='font-semibold text-lg xl:text-xl 2xl:text-3xl tracking-wide'
+          >
+            Przegląd i serwis klimatyzacji
+          </h3>
+          <p class='text-center lg:text-start'>
+            Wykonujemy okresowe przeglądy a w przypadku awarii serwisujemy
+            urządzenia.
+          </p>
+        </div>
+        <Image
+          format='avif'
+          src={P1}
+          loading={'eager'}
+          fetchpriority={'high'}
+          alt='Jednostka zewnętrzna klimatyzacji'
+          class='flex h-auto w-auto object-cover lg:rounded-r-2xl rounded-b-2xl lg:rounded-b-none xl:max-w-lg'
+        />
+      </div>
+    </div>
+    <div class='flex flex-col gap-8 items-center place-self-center'>
+      <h3
+        class='font-semibold text-lg xl:text-xl 2xl:text-3xl tracking-wide p-4 bg-white rounded-2xl text-primary'
+      >
+        Klimatycja ze wstęgu na umieszczenie - jakie montujemy?
+      </h3>
+      <div
+        class='flex flex-col gap-2 bg-primary p-4 rounded-2xl text-white text-center xl:max-w-lg'
+      >
+        <h4 class='font-semibold text-lg xl:text-xl'>Klimatyzatory ścienne</h4>
+        <p class=''>
+          Klimatyzacja ścienna to jedno z najczęściej wybieranych rozwiązań na
+          rynku ze względu na liczne zalety, takie jak bardzo duży wybór modeli,
+          kolorów i wariantów mocy, niski poziom emisji hałasu, kompaktowe
+          rozmiary oraz nowoczesny, estetyczny wygląd.
+        </p>
+      </div>
+      <div
+        class='flex flex-col gap-2 bg-primary p-4 rounded-2xl text-white text-center xl:ml-16 xl:max-w-lg'
+      >
+        <h4 class='font-semibold text-lg xl:text-xl'>Klimatyzatory sufitowe</h4>
+        <p class=''>
+          Klimatyzatory kasetonowe to urządzenia najczęściej montowane w
+          podwieszanym suficie, które cieszą się dużą popularnością w biurach i
+          przestrzeniach komercyjnych. Do ich najważniejszych zalet należą:
+          nawiew w czterech kierunkach zapewniający równomierne rozprowadzanie
+          powietrza, całkowite ukrycie jednostki w suficie.
+        </p>
+      </div>
+      <div
+        class='flex flex-col gap-2 bg-primary p-4 rounded-2xl text-white text-center xl:ml-32 xl:max-w-lg'
+      >
+        <h4 class='font-semibold text-lg xl:text-xl'>Klimatyzatory kanałowe</h4>
+        <p class=''>
+          Klimatyzatory kanałowe dzięki jednemu urządzeniu jesteśmy w stanie
+          schłodzić lub nagrzać kilka pomieszczeń jednocześnie, urządzenie
+          najlepiej uwzględnić na etapie projektowania budynku, jest również
+          możliwość rozprowadzenia kanałów nie użytkowym poddaszem za pomocą
+          specjalnie izolowanych kanałów .
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

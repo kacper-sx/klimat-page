@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets'
+import P1 from '@/assets/multi-split.avif'
+---
+
+<section
+  class='flex flex-col xl:flex-row px-spaced py-8 lg:py-24 items-center w-full gap-8 xl:gap-24'
+>
+  <Image
+    format='avif'
+    src={P1}
+    loading={'lazy'}
+    alt='KLimatyzacja typu multisplit'
+    class='flex max-h-[65vh] rounded-2xl xl:max-w-xl 2xl:max-w-3xl object-cover'
+  />
+  <article class='flex flex-col gap-8 bg-primary p-6 text-white rounded-2xl'>
+    <h2 class='font-semibold text-2xl xl:text-3xl 2xl:text-5xl tracking-wide'>
+      Klimatyzacja typu multisplit
+    </h2>
+    <p>
+      Klimatyzacja Multisplit to system, w którym jedno urządzenie zewnętrzne
+      obsługuje kilka jednostek wewnętrznych, działających niezależnie. Pozwala
+      to na precyzyjną regulację temperatury w wielu strefach oraz optymalizację
+      zużycia energii. Rozwiązanie to minimalizuje ilość jednostek zewnętrznych,
+      oszczędzając miejsce i upraszczając instalację. Systemy Multisplit
+      wykorzystują nowoczesne technologie inwerterowe, zapewniając wysoką
+      efektywność energetyczną i cichą pracę.
+    </p>
+    <h3 class='font-semibold text-xl xl:text-2xl 2xl:text-4xl tracking-wide'>
+      Klimatyzacja do mieszkania Biała Podlaska
+    </h3>
+    <p>
+      Klimatyzacja do mieszkania to nie tylko wygoda, ale przede wszystkim
+      sposób na poprawę codziennego komfortu i jakości powietrza. W Klimatbp
+      oferujemy nowoczesne, energooszczędne rozwiązania, które pozwalają
+      utrzymać idealny klimat w każdym wnętrzu – niezależnie od pogody za oknem.
+      Nasze systemy dbają o odpowiednią temperaturę i wilgotność powietrza,
+      dzięki czemu nawet upalne dni stają się przyjemne. Zapewniamy kompleksową
+      obsługę: fachowe doradztwo, profesjonalny montaż i serwis klimatyzacji.
+    </p>
+  </article>
+</section>

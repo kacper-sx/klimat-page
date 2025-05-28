@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets'
+import P1 from '@/assets/split.avif'
+---
+
+<section
+  class='flex flex-col xl:flex-row px-spaced py-8 lg:py-24 items-center w-full gap-8 xl:gap-24'
+>
+  <article class='flex flex-col gap-8 bg-primary p-6 text-white rounded-2xl'>
+    <h2 class='font-semibold text-2xl xl:text-3xl 2xl:text-5xl tracking-wide'>
+      Klimatyzacja typu split
+    </h2>
+    <p>
+      Klimatyzacja split to system składający się z jednej jednostki zewnętrznej
+      i jednej jednostki wewnętrznej, tworzących parę. Umożliwia skuteczne
+      chłodzenie lub ogrzewanie pojedynczego pomieszczenia z precyzyjną kontrolą
+      temperatury. Rozwiązanie to charakteryzuje się prostą instalacją oraz
+      wysoką wydajnością energetyczną. Dzięki zastosowaniu technologii
+      inwerterowej, systemy Split pracują cicho, efektywnie i ekonomicznie,
+      zapewniając komfort w użytkowanej przestrzeni.
+    </p>
+    <h3 class='font-semibold text-xl xl:text-2xl 2xl:text-4xl tracking-wide'>
+      Klimatyzacja do domu Biała Podlaska
+    </h3>
+    <p>
+      <strong>Klimatyzacja w domu</strong> to nie tylko wygoda, ale przede wszystkim
+      sposób na zapewnienie sobie i bliskim zdrowego i przyjemnego środowiska. W
+      Klimatbp proponujemy nowoczesne, energooszczędne systemy klimatyzacyjne, które
+      utrzymują idealne warunki wewnątrz budynku przez cały rok. Nasze urządzenia
+      dbają o świeże, czyste powietrze, właściwą temperaturę i odpowiedni poziom
+      wilgotności. Dzięki temu każdego dnia możesz cieszyć się komfortem i lepszym
+      samopoczuciem w swoim domu w Białej Podlaskiej i okolicach.
+    </p>
+  </article>
+  <Image
+    format='avif'
+    src={P1}
+    loading={'lazy'}
+    alt='Klimatyzacja typu split'
+    class='flex max-h-[65vh] rounded-2xl object-center xl:max-w-xl 2xl:max-w-3xl object-cover'
+  />
+</section>
