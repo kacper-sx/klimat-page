@@ -1,0 +1,110 @@
+---
+import { Picture } from 'astro:assets'
+import P1 from '@/assets/system-rekuperacji.avif'
+---
+
+<section class='relative grid lg:grid-cols-2 px-spaced gap-8 py-8 xl:py-24'>
+  <div
+    class='lg:sticky top-32 h-fit order-last grid rounded-2xl'
+  >
+    <Picture
+      src={P1}
+      alt='Klimatyzacja chodząca w pomieszczeniu biurowym i kobieta używająca pilota od klimatyzacji.'
+      formats={['avif']}
+      widths={[400, 800, 1200]}
+      sizes={`
+      (max-width: 1280px) 400px,
+      (max-width: 1536px) 800px,
+      1200px
+    `}
+      class={'rounded-2xl '}
+      loading={'eager'}
+    />
+  </div>
+  <div
+    class='order-first prose-stone flex flex-col gap-16 max-w-3xl'
+  >
+    <article class="!text-white">
+      <header>
+        <h2>
+          Czym jest rekuperacja?
+        </h2>
+      </header>
+      <p>
+        Rekuperacja to technologia umożliwiająca odzyskiwanie ciepła z powietrza usuwanego z wnętrza budynku. Odzyskane ciepło służy do podgrzewania świeżego powietrza napływającego z zewnątrz, co pozwala utrzymać komfortową temperaturę wewnątrz pomieszczeń niezależnie od pogody. Systemy wentylacji z odzyskiem ciepła zyskują na popularności w domach jednorodzinnych oraz obiektach komercyjnych, ze względu na ich wysoką efektywność energetyczną oraz pozytywny wpływ na jakość powietrza i zdrowie użytkowników. Świadczymy kompleksowe usługi w zakresie <strong>montażu oraz konserwacji systemów rekuperacyjnych.</strong>
+      </p>
+      <div class='flex flex-col gap-5'>
+        <h3>Rekuperacja w Białej Podlaskiej – dlaczego warto?</h3>
+        <p>
+          Rekuperacja to rozwiązanie, które przede wszystkim pozwala na realne oszczędności – odzyskując ciepło z powietrza usuwanego z budynku, znacząco zmniejszamy wydatki na ogrzewanie. Systemy te zapewniają również stały dopływ świeżego powietrza, co pozytywnie wpływa na zdrowie i komfort codziennego życia. To także ekologiczny wybór – ograniczając straty energii, zmniejszamy emisję dwutlenku węgla do środowiska. Dodatkowo, rekuperatory są łatwe w obsłudze i nie wymagają częstych przeglądów. Oferujemy kompleksowy montaż oraz profesjonalny serwis systemów rekuperacyjnych.
+        </p>
+      </div>
+    </article>
+    <article class="!text-white">
+      <header>
+        <h2>
+          Rekuperacja w mieszkaniu – komfort i oszczędność
+        </h2>
+      </header>
+      <p>
+        Zastosowanie systemu rekuperacyjnego w domu czy biurze przynosi wiele korzyści. Przede wszystkim, zapewnia stały dopływ świeżego powietrza, co ma pozytywny wpływ na samopoczucie i zdrowie mieszkańców czy pracowników. Ponadto dzięki odzyskiwaniu ciepła, system rekuperacyjny pozwala na znaczne obniżenie kosztów ogrzewania.
+      </p>
+    </article>
+    <article class="!text-white">
+      <header>
+        <h2>Ile kosztuje rekuperacja z montażem Biała Podlaska?</h2>
+      </header>
+      <p>
+        Inwestycja w <strong>system rekuperacji</strong> dla domu jednorodzinnego to wydatek rzędu 15 000–40 000 zł, zależny od wielkości domu, jakości urządzeń oraz zakresu instalacji i projektu. Warto zwrócić uwagę na jakość rekuperatora i profesjonalne wykonanie projektu, co przekłada się na efektywność energetyczną i komfort użytkowania systemu. Koszty eksploatacji są stosunkowo niskie, a system pozwala na oszczędności w ogrzewaniu dzięki odzyskowi ciepła.
+      </p>
+    </article>s
+  </div>
+</section>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    gap: 32px;
+    align-items: start;
+    padding: 32px;
+    border-radius: 16px;
+  }
+
+  h2 {
+    font-weight: 600; /* font-semibold */
+    color: white
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    max-width: 48rem; /* max-w-3xl */
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.1;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  h3 {
+    font-weight: 600; /* font-semibold */
+    color: white
+    font-size: 1.25rem;
+    line-height: 2rem;
+    
+    max-width: 48rem; /* max-w-3xl */
+  }
+
+  p {
+    font-size: 1rem;
+  }
+</style>
