@@ -11,8 +11,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://klimatbp.com",
   redirects: {
+
     '/klimatyzacja_1': '/klimatyzacja',
-    
+    '/strona-główna': '/',
   },
   vite: {
     plugins: [tailwindcss()]
