@@ -10,6 +10,10 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://klimatbp.com",
+  redirects: {
+    '/klimatyzacja_1': '/klimatyzacja',
+    
+  },
   vite: {
     plugins: [tailwindcss()]
   },
